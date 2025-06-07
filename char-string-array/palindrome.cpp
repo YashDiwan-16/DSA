@@ -23,7 +23,7 @@ bool isPalindrome (char name[], int length)
 
     while (start <= end)
     {
-        if (name[start] != name[end])
+        if (toLowerCase (name[start]) != toLowerCase(name[end]))
         {
             return false; // Not a palindrome
         }
