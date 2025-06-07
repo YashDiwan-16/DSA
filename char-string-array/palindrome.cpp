@@ -2,6 +2,20 @@
 using namespace std;
 
 
+char toLowerCase(char ch)
+{
+ if (ch>='a' && ch<='z')
+ {
+     return ch; // Already lowercase
+ }
+ else 
+ {
+    char temp = ch - 'A' + 'a'; // Convert to lowercase
+    return temp;
+ }
+ }
+
+
 bool isPalindrome (char name[], int length)
 {
     int start = 0;
@@ -62,5 +76,9 @@ int main()
     cout << "Reversed name is: " << name << endl;
 
     cout<<"Is your name a palindrome or not : "<< isPalindrome(name, len) << endl;
+
+    cout << "Lowercase of your name is: "<< toLowerCase('b') << endl;
+    cout << "Lowercase of your name is: "<< toLowerCase('B') << endl;
+
     return 0;
 }
